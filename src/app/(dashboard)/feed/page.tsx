@@ -328,7 +328,7 @@ export default function FeedPage() {
                         getScoreBgColor(score)
                       )}
                     >
-                      {score.toFixed(1)}
+                      {Number(score).toFixed(1)}
                     </div>
                   </div>
 
@@ -376,7 +376,7 @@ export default function FeedPage() {
                   <div className="space-y-1">
                     <div className="flex items-center justify-between text-xs text-muted-foreground">
                       <span>Confidence</span>
-                      <span>{confidence.toFixed(0)}%</span>
+                      <span>{Number(confidence).toFixed(0)}%</span>
                     </div>
                     <div className="h-1.5 rounded-full bg-gray-100 overflow-hidden">
                       <div

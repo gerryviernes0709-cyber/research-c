@@ -310,7 +310,7 @@ export default function DashboardPage() {
                           getScoreColor(score)
                         )}
                       >
-                        {score.toFixed(1)}
+                        {Number(score).toFixed(1)}
                       </div>
                     </a>
                   );

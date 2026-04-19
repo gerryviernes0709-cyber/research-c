@@ -387,7 +387,7 @@ export default function IdeaDetailPage() {
                     getScoreBgColor(score)
                   )}
                 >
-                  {score.toFixed(1)}
+                  {Number(score).toFixed(1)}
                 </span>
               </CardTitle>
             </CardHeader>
@@ -402,7 +402,7 @@ export default function IdeaDetailPage() {
                         getScoreColor(item.value)
                       )}
                     >
-                      {item.value.toFixed(0)}
+                      {Number(item.value).toFixed(0)}
                     </span>
                   </div>
                   <div className="h-2 rounded-full bg-gray-100 overflow-hidden">
@@ -544,7 +544,7 @@ export default function IdeaDetailPage() {
                       : "text-red-600 border-red-200"
                   )}
                 >
-                  {getConfidenceLabel(confidence)} ({confidence.toFixed(0)}%)
+                  {getConfidenceLabel(confidence)} ({Number(confidence).toFixed(0)}%)
                 </Badge>
               </div>
               <div className="h-3 rounded-full bg-gray-100 overflow-hidden">

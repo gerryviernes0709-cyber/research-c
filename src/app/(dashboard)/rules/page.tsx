@@ -493,11 +493,11 @@ export default function RulesPage() {
                   <div className="flex items-center justify-between text-xs text-muted-foreground">
                     <span>Weight</span>
                     <span className="font-medium text-foreground">
-                      {(rule.weight || 1).toFixed(1)}
+                      {(Number(rule.weight) || 1).toFixed(1)}
                     </span>
                   </div>
                   <Slider
-                    value={[Math.round((rule.weight || 1) * 50)]}
+                    value={[Math.round((Number(rule.weight) || 1) * 50)]}
                     min={0}
                     max={100}
                     onValueChange={(val: number | readonly number[]) => {

@@ -272,7 +272,7 @@ export default function AnalyticsPage() {
                       </div>
                       <div className="flex items-center gap-4">
                         <span className="text-sm font-medium tabular-nums">
-                          {tk.latestValue.toFixed(1)}
+                          {Number(tk.latestValue).toFixed(1)}
                         </span>
                         {tk.delta !== null && (
                           <span
@@ -286,7 +286,7 @@ export default function AnalyticsPage() {
                             ) : (
                               <ArrowDownRight className="w-3 h-3" />
                             )}
-                            {Math.abs(tk.delta).toFixed(1)}%
+                            {Math.abs(Number(tk.delta)).toFixed(1)}%
                           </span>
                         )}
                       </div>
@@ -326,7 +326,7 @@ export default function AnalyticsPage() {
                           getScoreColor(score)
                         )}
                       >
-                        {score.toFixed(1)}
+                        {Number(score).toFixed(1)}
                       </div>
                       <div className="flex-1 min-w-0">
                         <a
@@ -496,7 +496,7 @@ export default function AnalyticsPage() {
                             Confidence
                           </span>
                           <span className="font-medium">
-                            {confidence.toFixed(0)}%
+                            {Number(confidence).toFixed(0)}%
                           </span>
                         </div>
                         <div className="h-1.5 rounded-full bg-gray-100 overflow-hidden">
